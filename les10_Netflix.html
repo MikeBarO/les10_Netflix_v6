@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<!-- lang="he-IL" -->
+
+<head>
+    <title>less10 - NETFLIX responsive</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/netflix.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".accordion_tab").click(function () {
+                $(".accordion_tab").each(function () {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+                $(this).next().addClass("active");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    <!-- NAVBAR -->
+
+    <nav class="navbar h-navbar p-0 fixed-top" role="navigation">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-xl-9 col-lg-10 col-sm-8 col-7">
+                    <ul class="navbar-nav flex-row justify-content-end flex-wrap align-items-center mr-lg-4 mr-xl-0">
+                        <li class="nav-item px-3 text-uppercase mb-0 position-relative d-none d-lg-flex"> <a
+                                class="d-block w-100 h-100 text-white py-4 position-relative top-link"
+                                href="#"><strong>About</strong></a>
+                        </li>
+                        <li class="nav-item px-3 text-uppercase mb-0 position-relative d-none d-lg-flex"> <a
+                                class="d-block w-100 h-100 text-white py-4 position-relative top-link"
+                                href="/locations/"><strong>Login</strong></a>
+                        </li>
+                        <li class="nav-item px-3 text-uppercase my-3 my-lg-0 mr-5 mr-lg-4 mr-xl-5 d-none d-lg-flex"> <a
+                                class="d-block w-100 h-100 text-white py-4 position-relative top-link"
+                                href="/contact/"><strong>Contact</strong></a>
+                        </li>
+                    </ul>
+                    <button id="sidenav-open-btn" class="menu-hamburger position-absolute pointer p-0"> <span
+                            class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-xl-3 col-lg-2 col-sm-4 col-5">
+                    <a href="/">
+                        <img alt="LunarXP Logo" class="img-fluid py-3" src="./images/nflogonb.png" aria-role="logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BLOCKS -->
+    <section class="all_stripes">
+        <div class="cont1 stripe">
+            <!-- <span class="menu-entry">cont1 stripe</span> -->
+        </div>
+
+        <div dir="rtl" class="cont2 stripe">
+            <div class=featured-item>
+                <img class="img_item" src="./images/img2_tv.png">
+                <video width="320" height="240" controls autoplay poster="./images/img2_tv.png">
+                    <source src="./images/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="featured-text">
+                <h1>לצפות בהנאה בטלוויזיה.</h1>
+                <br />
+                <h5>אפשר לצפות ב-Netflix בטלוויזיות חכמות, במכשירי Playstation,‏ Xbox,‏ Chromecast,‏ Apple TV,
+                    בנגני Blu-ray ועוד.</h5>
+            </div>
+        </div>
+
+        <div dir="rtl" class="cont3 stripe">
+            <!-- <p>cont3 stripe</p> -->
+            <div class="featured-text">
+                <h1>להוריד את הסדרות האהובות ולצפות בהן כשאין חיבור לאינטרנט.</h1>
+                <br />
+                <h5>אפשר לשמור בקלות את התכנים האהובים כדי שתמיד יהיה מה לראות.</h5>
+            </div>
+            <div class=featured-item>
+                <img class="img_item" src="./images/img3_mobile1.jpg">
+            </div>
+        </div>
+
+        <div dir="rtl" class="cont4 stripe">
+            <!-- <p>cont4 stripe</p> -->
+            <div class=featured-item>
+                <img class="img_item" src="./images/img4_device-pile.png">
+            </div>
+            <div class="featured-text">
+                <h1>לצפות מקול מקום.</h1>
+                <br />
+                <h5><b>אפשר לצפות ללא הגבלה בסרטים ובתוכניות טלוויזיה בטלפון, בטאבלט, במחשב הנייד ובטלוויזיה – ללא תשלום
+                        נוסף.</b></h5>
+            </div>
+        </div>
+
+        <div dir="rtl" class="cont5 stripe">
+            <!-- <p>cont5 stripe</p> -->
+            <div class="featured-text">
+                <h1>יצירת פרופילים לילדים.</h1>
+                <br />
+                <h5">הילדים יוכלו לצאת להרפתקאות עם הדמויות האהובות, באזור שמותאם במיוחד עבורם – ללא תשלום נוסף.</h5>
+            </div>
+            <div class=featured-item>
+                <img class="img_item" src="./images/img5_he-il.jpg">
+            </div>
+        </div>
+
+        <div class="cont6 stripe">
+            <!-- <p>cont5 stripe</p> -->
+
+            <div class="wrapper">
+                <div class="title">תשובות לשאלות נפוצות</div>
+
+                <div dir="rtl" class="accordion_wrapper">
+                    <div class="accordion_item">
+                        <div class="accordion_tab">מה הוא שירות Netflix?
+                            <div class="arrow">
+                                <img src="./images/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="accordion_content">
+                            <p>Netflix הוא שירות סטרימינג המציע מגוון רחב של תכנים זוכי פרסים – תוכניות טלוויזיה, סרטים,
+                                אנימה, סרטי תעודה ועוד – באלפי מכשירים עם חיבור לאינטרנט.</p>
+                            <br />
+                            <p>אפשר לצפות בלי הגבלה, בכל זמן ובלי אף פרסומת אחת – והכול בתעריף חודשי נמוך. ב-Netflix
+                                תמיד אפשר למצוא משהו חדש, ואנחנו מוסיפים תוכניות טלוויזיה וסרטים חדשים בכל שבוע!</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item">
+                        <div class="accordion_tab">כמה Netflix עולה?
+                            <div class="arrow">
+                                <img src="./images/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="accordion_content">
+                            <p>אפשר לצפות ב-Netflix בטלפון חכם, בטאבלט, בטלוויזיה חכמה, במחשב נייד או בסטרימר – והכול
+                                במחיר חודשי קבוע. מחירי החבילות נעים בין ‏32.90 ₪ ל-‏60.90 ₪ לחודש. אין תשלומים נוספים,
+                                אין הסכמי התקשרות.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item">
+                        <div class="accordion_tab">איפה אפשר לצפות?
+                            <div class="arrow">
+                                <img src="./images/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="accordion_content">
+                            <p>אפשר לצפות מכל מקום, בכל זמן, באינספור מכשירים. כניסה לחשבון שלך ב-Netflix תאפשר לך לצפות
+                                בתכנים שלנו מייד – במחשב האישי דרך אתר האינטרנט netflix.com, או בכל מכשיר המחובר
+                                לאינטרנט שתומך באפליקציית Netflix, כולל טלוויזיות חכמות, טלפונים חכמים, טאבלטים,
+                                סטרימרים וקונסולות משחקים.</p>
+                            <br />
+                            <p>אפשר גם להוריד תוכניות אהובות באמצעות האפליקציה למכשירי iOS,‏ Android או Windows 10.
+                                ההורדות יאפשרו לך לצפות גם מחוץ לבית, כשאין חיבור לאינטרנט. אפשר לקחת את Netflix לכל
+                                מקום.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item">
+                        <div class="accordion_tab">איך מבטלים?
+                            <div class="arrow">
+                                <img src="./images/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="accordion_content">
+                            <p>Netflix הוא שירות גמיש. אין הסכמי התקשרות ארוכים, אין אותיות קטנות – ואין התחייבות. אפשר
+                                לבטל את החשבון באינטרנט בשתי לחיצות. אין דמי ביטול – אפשר להתחיל את המינוי ולבטל אותו
+                                בכל שלב.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item">
+                        <div class="accordion_tab">מה אפשר לראות ב-Netflix?
+                            <div class="arrow">
+                                <img src="./images/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="accordion_content">
+                            <p>ב-Netflix מחכה לך ספרייה גדולה של סרטים, סרטי תעודה, תוכניות טלוויזיה, אנימה, תכנים
+                                מקוריים זוכי פרסים של Netflix ועוד. אפשר לצפות בלי הגבלה, בזמן שמתאים לך.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion_item">
+                        <div class="accordion_tab">Netflix טוב לילדים?
+                            <div class="arrow">
+                                <img src="./images/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                        <div class="accordion_content">
+                            <p>חוויית Netflix לילדים כלולה במינוי שלך ומעניקה להורים אפשרות בקרה בזמן שהילדים נהנים
+                                מתוכניות טלוויזיה ומסרטים לכל המשפחה באזור שמוקדש רק להם.</p>
+                            <br />
+                            <p>פרופילים של ילדים כוללים בקרת הורים באמצעות קוד אישי, שמאפשרת להגביל את התכנים שיופיעו
+                                בפרופיל לפי סיווג צפייה ולחסום כותרים ספציפיים שאינך רוצה שהילדים יראו.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input_button">
+                <p dir="lrt">רוצה להתחיל לצפות? הזן את כתובת האימייל שלך כדי ליצור מינוי או להפעיל מחדש מינוי.</p>
+                <div class="but">
+                    <div class="button">קדימה מתחילים</div>
+                </div>
+                    <!--  class="InputLine" -->
+                    <!-- <input type="email" data-uia="field-email" name="email" class="nfTextField" id="id_email_faq"
+                        value="" tabindex="0" autocomplete="email" maxlength="50" minlength="5" dir=""> -->
+                    <!-- <input type="email" value="default@example.com"> -->
+                <form id="front-form" action="#">
+                    <input type="text" id="email" name="email" placeholder="Email address">
+                    <input type="submit" id="sub" value="TRY NOW FOR ₪3.90 >">
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <section class="footer">
+            <div class="our-story-card card-contents footer-card our-story-card-no-border" 
+                data-uia-our-story="footer" data-uia="our-story-card">
+                <div class="site-footer-wrapper centered dark">
+                    <div class="site-footer">
+                        <p class="footer-top"><a class="footer-top-a" href="https://help.netflix.com/contactus">שאלות?
+                                צור קשר.</a></p>
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col">
+                                        <ul class="list-group" > 
+                                            <li class="list-group-item" >שאלות נפוצות</li>
+                                            <li class="list-group-item" >קשרי משקיעים</li>
+                                            <li class="list-group-item" >פרטיות</li>
+                                            <li class="list-group-item" >בדיקת מהירות</li>
+                                          </ul>
+                                      </div>
+                                      <div class="col">
+                                        <ul class="list-group" > 
+                                            <li class="list-group-item" >מרכז העזרה</li>
+                                            <li class="list-group-item" >דרושים</li>
+                                            <li class="list-group-item" >העדפות לגבי קובצי Cookie</li>
+                                            <li class="list-group-item" >הודעות משפטיות</li>
+                                          </ul>
+                                      </div>
+                                      <div class="col">
+                                        <ul class="list-group" > 
+                                            <li class="list-group-item" >חשבון</li>
+                                            <li class="list-group-item" >אפשרויות צפייה</li>
+                                            <li class="list-group-item" >מידע על החברה</li>
+                                            <li class="list-group-item" >תכנים מקוריים של Netflix</li>
+                                          </ul>
+                                      </div>
+                                      <div class="col">
+                                        <ul class="list-group" > 
+                                            <li class="list-group-item" >מרכז המדיה</li>
+                                            <li class="list-group-item" >תנאי שימוש</li>
+                                            <li class="list-group-item" >צור קשר</li>
+                                            <li class="list-group-item" ></li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                    
+                        <div class="lang-selection-container" id="lang-switcher">
+                            <div data-uia="language-picker+container" class="ui-select-wrapper"><label
+                                    for="undefined-select" class="ui-label no-display"><span
+                                        class="ui-label-text"></span></label>
+                                <div class="select-arrow medium prefix globe"><select data-uia="language-picker"
+                                        class="ui-select medium" id="undefined-select" tabindex="0"
+                                        placeholder="lang-switcher" data-fillr-id="2102664310" data-fillr="bound"
+                                        autocomplete="off">
+                                        <option selected="" value="/il/" data-language="he" data-country="IL">עברית
+                                        </option>
+                                        <option value="/il-en/" data-language="en" data-country="IL">English</option>
+                                    </select></div>
+                            </div>
+                        </div>
+                        <p class="footer-country">Netflix ישראל</p>
+                    </div>
+                </div>
+                <div class="center-pixel" style="position:absolute"></div>
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+        let newElement=document.createElement('div');
+        newElement.textContent='Hello Michael';
+        document.body.appendChild(newElement);
+        
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
